@@ -13,24 +13,29 @@
         <div class="hero__main">
           <header class="header">
             <!-- mobile-only -->
-            <button type="button" aria-label="open menu">
+            <button type="button" aria-label="open menu" aria-expanded="false" aria-controls="nav-menu" class="header__btn" id="openMenu">
               <img src="/icon-hamburger.svg" alt="" width="20" height="14" />
             </button>
 
             <div class="header__logo-container">
               <img src="/logo.svg" alt="room logo" />
             </div>
-            <nav class="nav">
+            <nav class="nav close-nav" id="nav-menu">
+              <div class="wrapper">
+                <button type="button" class="nav__close-btn" aria-label="close menu" aria-expanded="false" aria-controls="nav-menu" id="closeMenu">
+                <img src="/icon-close.svg" alt="" width="16" height="16">
+              </button>
               <ul class="nav__links">
                 <li class="nav__link"><a href="#">home</a></li>
                 <li class="nav__link"><a href="#shop">shop</a></li>
                 <li class="nav__link"><a href="#about">about</a></li>
                 <li class="nav__link"><a href="#contact">contact</a></li>
               </ul>
+              </div>
             </nav>
           </header>
 
-          <div class="hero__image-container">
+          <div class="hero__main-image-container">
             <picture>
               <source
                 media="(min-width: 1440px)"

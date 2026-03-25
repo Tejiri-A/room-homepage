@@ -1,0 +1,120 @@
+@use "../abstracts" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include breakpoint(large) {
+    gap: $spacing-700;
+  }
+
+  .nav {
+    // do the mobile styling later
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    background-color: $clr-white;
+    transition: transform 0.3s ease-out;
+
+    @include breakpoint(large) {
+      position: unset;
+      background-color: transparent;
+      height: auto;
+    }
+
+    // to be replaced later (probably)
+    &.close-nav {
+      transform: translateY(-100%);
+
+      @include breakpoint(large){
+        transform: unset;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 85%;
+    }
+
+    &__close-btn {
+      transition: all 0.3s ease;
+
+      &:focus,
+      &:active {
+        outline: 1px solid black;
+        outline-offset: 2px;
+      }
+
+      @include breakpoint(large) {
+        display: none;
+      }
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: $spacing-400;
+      @include text-preset-3-semi-bold;
+
+      @include breakpoint(large) {
+        color: $clr-white;
+      }
+    }
+
+    &__link {
+        position: relative;
+
+        &:hover{
+            &::after{
+                width: 1rem;
+            }
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0.125rem;
+            background-color: $clr-white;
+            left: 0;
+            bottom: -6px;
+            right: 0;
+            margin-inline: auto;
+            transition: width 0.3s ease;
+        }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: $spacing-300;
+    transition: all 0.3s ease;
+
+    &:focus,
+    &:active {
+      outline: 1px solid white;
+      outline-offset: 2px;
+    }
+
+    @include breakpoint(medium) {
+      left: $spacing-800;
+    }
+
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+}
