@@ -44,14 +44,27 @@
 }
 
 // BREAKPOINTS
-@mixin breakpoint-tablet {
-    @media screen and (min-width: $bp-md) {
-        @content;
-    }
-}
+// @mixin breakpoint-tablet {
+//     @media screen and (min-width: $bp-md) {
+//         @content;
+//     }
+// }
 
-@mixin breakpoint-desktop {
-    @media screen and (min-width: $bp-lg) {
-        @content;
+// @mixin breakpoint-desktop {
+//     @media screen and (min-width: $bp-lg) {
+//         @content;
+//     }
+// }
+
+@mixin breakpoint($point){
+    @if $point == medium{
+        @media screen and (min-width: $bp-md) {
+            @content;
+        }
+    }
+    @else if $point == large{
+        @media screen and (min-width: $bp-lg) {
+            @content;
+        }
     }
 }

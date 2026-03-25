@@ -1,4 +1,11 @@
+@use "../abstracts" as *;
+
 main{
     min-height: 100vh;
     display: grid;
+
+    @include breakpoint(medium){
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
 }
