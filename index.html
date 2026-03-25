@@ -54,21 +54,23 @@
               <source
                 media="(min-width: 1440px)"
                 srcset="/desktop-image-hero-1.jpg"
+                id="carouselDesktopImg"
               />
               <img
                 src="/mobile-image-hero-1.jpg"
-                alt=""
+                alt="Two white modern chairs next to a wooden dining table with a small bonsai tree."
                 width="375"
                 height="360"
+                id="carouselImg"
               />
             </picture>
           </div>
         </div>
         <div class="hero__text-content">
-          <div class="wrapper">
+          <div class="wrapper" aria-live="polite" aria-atomic="true">
             <div>
-              <h1>Discover innovative ways to decorate</h1>
-              <p>
+              <h1 id="carouselHeading">Discover innovative ways to decorate</h1>
+              <p id="carouselParagraph">
                 We provide unmatched quality, comfort, and style for property
                 owners across the country. Our experts combine form and function
                 in bringing your vision to life. Create a room in your own style
@@ -88,10 +90,10 @@
           </div>
         </div>
         <div class="hero__btns">
-          <button type="button" id="prevSlide">
+          <button type="button" id="prevSlide" aria-label="previous slide">
             <img src="/icon-angle-left.svg" alt="" width="14" height="24">
           </button>
-          <button type="button" id="nextSlide">
+          <button type="button" id="nextSlide" aria-label="next slide">
             <img src="/icon-angle-right.svg" alt="" width="14" height="24">
           </button>
         </div>
