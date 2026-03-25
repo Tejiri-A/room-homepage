@@ -4,7 +4,7 @@
   display: grid;
 
   @include breakpoint(large) {
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1.38fr 0.97fr;
   }
 
   &__text-content {
@@ -18,8 +18,8 @@
       padding-inline: $spacing-800;
     }
 
-    @include breakpoint(large){
-        padding-inline: $spacing-600;
+    @include breakpoint(large) {
+      padding-inline: $spacing-600;
     }
   }
 
