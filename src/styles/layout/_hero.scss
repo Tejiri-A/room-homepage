@@ -6,6 +6,8 @@
   display: grid;
   grid-template-rows: repeat(2, 1fr);
 
+
+
   @include breakpoint(large) {
     grid-template-rows: unset;
     grid-template-columns: 1.5fr 1fr;
@@ -45,18 +47,7 @@
     }
 
     .wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: $spacing-400;
-
-      @include breakpoint(medium) {
-        gap: $spacing-300;
-      }
-
-      @include breakpoint(large) {
-        gap: $spacing-200;
-        max-width: 25rem;
-      }
+      @include wrapper-layout;
 
       h1 {
         @include text-preset-2;

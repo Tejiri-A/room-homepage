@@ -2,45 +2,45 @@
 
 // TYPOGRAPGY
 @mixin text-preset-1 {
-    font-size: $fs-xl;
-    line-height: $lh-90;
-    letter-spacing: $ls-neg-2;
-    font-weight: $font-semibold;
+  font-size: $fs-xl;
+  line-height: $lh-90;
+  letter-spacing: $ls-neg-2;
+  font-weight: $font-semibold;
 }
 
 @mixin text-preset-2 {
-    font-size: $fs-lg;
-    line-height: $lh-100;
-    letter-spacing: $ls-neg-2;
-    font-weight: $font-semibold;
+  font-size: $fs-lg;
+  line-height: $lh-100;
+  letter-spacing: $ls-neg-2;
+  font-weight: $font-semibold;
 }
 
 @mixin text-preset-3-bold {
-    font-size: $fs-base;
-    line-height: $lh-140;
-    letter-spacing: $ls-7;
-    font-weight: $font-bold;
+  font-size: $fs-base;
+  line-height: $lh-140;
+  letter-spacing: $ls-7;
+  font-weight: $font-bold;
 }
 
 @mixin text-preset-3-semi-bold {
-    font-size: $fs-base;
-    line-height: $lh-100;
-    letter-spacing: $ls-neg-0_7;
-    font-weight: $font-semibold;
+  font-size: $fs-base;
+  line-height: $lh-100;
+  letter-spacing: $ls-neg-0_7;
+  font-weight: $font-semibold;
 }
 
 @mixin text-preset-3-medium {
-    font-size: $fs-base;
-    line-height: $lh-140;
-    letter-spacing: $ls-neg-0_5;
-    font-weight: $font-medium;
+  font-size: $fs-base;
+  line-height: $lh-140;
+  letter-spacing: $ls-neg-0_5;
+  font-weight: $font-medium;
 }
 
 @mixin text-preset-4 {
-    font-size: $fs-sm;
-    line-height: $lh-100;
-    letter-spacing: $ls-12_5;
-    font-weight: $font-medium;
+  font-size: $fs-sm;
+  line-height: $lh-100;
+  letter-spacing: $ls-12_5;
+  font-weight: $font-medium;
 }
 
 // BREAKPOINTS
@@ -56,15 +56,29 @@
 //     }
 // }
 
-@mixin breakpoint($point){
-    @if $point == medium{
-        @media screen and (min-width: $bp-md) {
-            @content;
-        }
+@mixin breakpoint($point) {
+  @if $point == medium {
+    @media screen and (min-width: $bp-md) {
+      @content;
     }
-    @else if $point == large{
-        @media screen and (min-width: $bp-lg) {
-            @content;
-        }
+  } @else if $point == large {
+    @media screen and (min-width: $bp-lg) {
+      @content;
     }
+  }
+}
+
+@mixin wrapper-layout {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-400;
+
+  @include breakpoint(medium) {
+    gap: $spacing-300;
+  }
+
+  @include breakpoint(large) {
+    gap: $spacing-200;
+    max-width: 25rem;
+  }
 }

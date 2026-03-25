@@ -3,9 +3,9 @@
 main{
     min-height: 100vh;
     
-    @include breakpoint(medium){
+    @include breakpoint(large){
         display: grid;
-        grid-template-columns: 1fr 1.5fr 1fr;
+        // grid-template-columns: 1fr 1.5fr 1fr;
         grid-template-rows: 2fr 1fr;
     }
 }
