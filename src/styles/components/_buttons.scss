@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: $spacing-400;
+  transition: color 0.3s ease, fill 0.3s ease;
+
+  &:hover, &:focus {
+    color: $clr-gray-500;
+    fill: $clr-gray-500;
+  }
+
+  &:focus{
+    outline: 2px solid $clr-gray-500;
+    outline-offset: 2px;
+  }
+  
+  span {
+    @include text-preset-4;
+  }
+
+  @include breakpoint(large){
+    width: fit-content;
+  }
+}
