@@ -2,12 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Room homepage</title>
     <script defer type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <main>
+      <section class="hero">
+        <div class="hero__main">
+          <header class="header">
+            <!-- mobile-only -->
+            <button type="button" aria-label="open menu">
+              <img src="/icon-hamburger.svg" alt="" width="20" height="14" />
+            </button>
+
+            <div class="header__logo-container">
+              <img src="/logo.svg" alt="room logo" />
+            </div>
+            <nav class="nav">
+              <ul class="nav__links">
+                <li class="nav__link"><a href="#">home</a></li>
+                <li class="nav__link"><a href="#shop">shop</a></li>
+                <li class="nav__link"><a href="#about">about</a></li>
+                <li class="nav__link"><a href="#contact">contact</a></li>
+              </ul>
+            </nav>
+          </header>
+
+          <div class="hero__image-container">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="/desktop-image-hero-1.jpg"
+              />
+              <img
+                src="/mobile-image-hero-1.jpg"
+                alt=""
+                width="375"
+                height="360"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="hero__text-content"></div>
+      </section>
+      <section class="image-block">image block</section>
+      <section class="about">about</section>
+      <section class="image-block image-block--2">image block 2</section>
+    </main>
   </body>
 </html>

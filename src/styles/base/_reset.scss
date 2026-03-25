@@ -59,3 +59,8 @@ textarea, select {
   scroll-margin-block: 5ex;
 }
 
+// Remove default button styles
+button{
+    border: none;
+    background: transparent;
+}
