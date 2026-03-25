@@ -1,0 +1,72 @@
+// COLORS
+$clr-white: hsl(0, 100%, 100%);
+$clr-black: hsl(0, 0%, 0%);
+
+$clr-gray-800: hsl(0, 0%, 27%);
+$clr-gray-500: hsl(0, 0%, 63%);
+$clr-gray-200: hsl(0, 0%, 85%);
+$clr-gray-100: hsl(0, 0%, 94%);
+$clr-gray-50: hsl(0, 0%, 98%);
+
+// TYPOGRAPHY
+/* league-spartan-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/league-spartan-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* league-spartan-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/league-spartan-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* league-spartan-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/league-spartan-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+$font-family: "League Spartan", sans-serif;
+
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+$fs-xl: 3rem; // 48px
+$fs-lg: 2.5rem; // 40px
+$fs-base: 1rem; // 16px
+$fs-sm: 0.9375rem; // 15px
+
+$lh-140: 1.4;
+$lh-100: 1;
+$lh-90: 0.9;
+
+$ls-12_5: 0.78125em; // 12.5px
+$ls-7: 0.4375em; // 7px
+$ls-neg-2: -0.125em; //-2px
+$ls-neg-0_7: -0.04375em; // -0.7px
+$ls-neg-0_5: -0.03125em; // -0.5px
+
+// SPACING
+$spacing-0: 0px; 
+$spacing-200: 1rem; // 16px
+$spacing-300: 1.5rem; // 24px
+$spacing-400: 2rem; // 32px
+$spacing-600: 3rem; // 48px
+$spacing-700: 3.5rem; // 56px
+$spacing-800: 4rem; // 64px
+
+// MEDIA BREAKPOINTS
+$bp-md: 48em;
+$bp-lg: 90em;
