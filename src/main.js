@@ -72,15 +72,28 @@ const updateSlider = (currIndex) => {
   carouselDesktopImg.srcset = `/desktop-image-hero-${currIndex + 1}.jpg`;
 };
 
-leftBtn.addEventListener("click", () => {
+const prevSlideHandler = () => {
   currIndex =
     currIndex === 0
       ? carouselData.length - 1
       : (currIndex - 1) % carouselData.length;
   updateSlider(currIndex);
-});
+};
 
-rightBtn.addEventListener("click", () => {
+const nextSlideHandler = () => {
   currIndex = (currIndex + 1) % carouselData.length;
   updateSlider(currIndex);
+};
+
+leftBtn.addEventListener("click", prevSlideHandler);
+
+rightBtn.addEventListener("click", nextSlideHandler);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    prevSlideHandler();
+  }
+  if (e.key === "ArrowRight") {
+    nextSlideHandler();
+  }
 });
