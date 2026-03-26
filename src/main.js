@@ -63,13 +63,13 @@ const carouselDesktopImg = selectElement("#carouselDesktopImg");
 
 let currIndex = 0;
 
-const updateSlider = (currIndex) => {
-  let currData = carouselData[currIndex];
+const updateSlider = (index) => {
+  const currData = carouselData[index];
   carouselHeading.textContent = currData.header;
   carouselParagraph.textContent = currData.body;
-  carouselImg.src = `/mobile-image-hero-${currIndex + 1}.jpg`;
+  carouselImg.src = `/mobile-image-hero-${index + 1}.jpg`;
   carouselImg.alt = currData.imgAlt;
-  carouselDesktopImg.srcset = `/desktop-image-hero-${currIndex + 1}.jpg`;
+  carouselDesktopImg.srcset = `/desktop-image-hero-${index + 1}.jpg`;
 };
 
 const prevSlideHandler = () => {

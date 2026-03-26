@@ -12,14 +12,14 @@
 
   .nav {
     // do the mobile styling later
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: absolute;
+    top: -#{$spacing-600};
+    left: -#{$spacing-300};
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 110px;
+    height: 6.875rem;
     background-color: $clr-white;
     transition: transform 0.3s ease-out;
 
@@ -27,13 +27,14 @@
       position: unset;
       background-color: transparent;
       height: auto;
+      width: auto;
     }
 
     // to be replaced later (probably)
     &.close-nav {
-      transform: translateY(-100%);
+      transform: translateY(-150%);
 
-      @include breakpoint(large){
+      @include breakpoint(large) {
         transform: unset;
       }
     }
@@ -71,26 +72,26 @@
     }
 
     &__link {
-        position: relative;
+      position: relative;
 
-        &:hover{
-            &::after{
-                width: 1rem;
-            }
+      &:hover {
+        &::after {
+          width: 1rem;
         }
+      }
 
-        &::after{
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0.125rem;
-            background-color: $clr-white;
-            left: 0;
-            bottom: -6px;
-            right: 0;
-            margin-inline: auto;
-            transition: width 0.3s ease;
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0.125rem;
+        background-color: $clr-white;
+        left: 0;
+        bottom: -6px;
+        right: 0;
+        margin-inline: auto;
+        transition: width 0.3s ease;
+      }
 
       a {
         text-decoration: none;

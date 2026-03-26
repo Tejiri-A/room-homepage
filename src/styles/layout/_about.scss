@@ -23,6 +23,10 @@
     }
   }
 
+  &__heading{
+    @include text-preset-3-bold;
+  }
+
   &__img-container {
     img {
       width: 100%;
