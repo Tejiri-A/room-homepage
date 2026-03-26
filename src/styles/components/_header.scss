@@ -8,6 +8,7 @@
 
   @include breakpoint(large) {
     gap: $spacing-700;
+    justify-content: start;
   }
 
   .nav {
